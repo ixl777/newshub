@@ -1,6 +1,16 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
+useEffect(() => {
+  const GNEWS_KEY = process.env.NEXT_PUBLIC_GNEWS_API_KEY;
+  // Ссылка для GNews
+  fetch(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${GNEWS_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      // У GNews массив называется .articles, так же как и у старого
+      setGlobalNews(data.articles || []);
+      setLoading(false);
+    })
+    .catch(err => console.error("Ошибка GNews:", err));
+}, []);
 import './globals.css';
 
 
