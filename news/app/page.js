@@ -11,6 +11,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const NEWS_API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
+
 export default function Home() {
   const [globalNews, setGlobalNews] = useState([]);
   const [loading, setLoading] = useState(true);
