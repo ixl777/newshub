@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import './globals.css';
 
-// Инициализация Supabase. Я обновил ключ на тот, который точно должен сработать.
+
 const supabaseUrl = 'https://ubpthbtnzoochvpxschp.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVicHRoYnRuem9vY2h2cHhzY2hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MTIwMDQsImV4cCI6MjA1ODAwMDAwNH0.S8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-j'; 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -18,7 +18,7 @@ export default function Home() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Загрузка новостей
+
     fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${NEWS_API_KEY}`)
       .then(res => res.json())
       .then(data => {
