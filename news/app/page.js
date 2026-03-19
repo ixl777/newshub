@@ -4,11 +4,12 @@ import { createClient } from '@supabase/supabase-js';
 import './globals.css';
 
 
-const supabaseUrl = 'https://ubpthbtnzoochvpxschp.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVicHRoYnRuem9vY2h2cHhzY2hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MTIwMDQsImV4cCI6MjA1ODAwMDAwNH0.S8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-j'; 
+// Замени свои строки 7-11 на эти:
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const NEWS_API_KEY = '02bd0bc518a5415cbf7dd9f35b9136ac';
+const NEWS_API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
 export default function Home() {
   const [globalNews, setGlobalNews] = useState([]);
