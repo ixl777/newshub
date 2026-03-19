@@ -15,7 +15,6 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-// Инициализация Supabase. Я обновил ключ на тот, который точно должен сработать.
 const supabaseUrl = 'https://ubpthbtnzoochvpxschp.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVicHRoYnRuem9vY2h2cHhzY2hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MTIwMDQsImV4cCI6MjA1ODAwMDAwNH0.S8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-jS8m_9D8pY77-j';
 const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseKey);
@@ -29,7 +28,6 @@ function Home() {
     const [user, setUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Home.useEffect": ()=>{
-            // Загрузка новостей
             fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${NEWS_API_KEY}`).then({
                 "Home.useEffect": (res)=>res.json()
             }["Home.useEffect"]).then({
